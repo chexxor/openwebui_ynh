@@ -92,6 +92,8 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 
 ### This should be a literal copypaste of what happened in the install's "System configuration" section
 
+ynh_config_add_nginx
+
 ynh_config_add_systemd
 
 yunohost service add "$app" --description="Comprehensive suite for LLMs with a user-friendly WebUI" --log="/var/log/$app/$app.log"

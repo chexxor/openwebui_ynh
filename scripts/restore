@@ -66,9 +66,11 @@ ynh_restore "/etc/$app/"
 ynh_restore "/var/log/$app/"
 
 #=================================================
-# RELOAD THE APP SERVICE
+# RELOAD NGINX AND THE APP SERVICE
 #=================================================
+ynh_script_progression "Reloading NGINX web server and $app's service..."
 ynh_systemctl --service="$app" --action="start"
+ynh_systemctl --service=nginx --action=reload
 
 #=================================================
 # END OF SCRIPT

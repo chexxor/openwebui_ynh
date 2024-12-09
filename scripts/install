@@ -117,6 +117,9 @@ ynh_script_progression "Adding system configurations related to $app..."
 ###   - As well as the section "RESTORE SYSTEMD" in the restore script
 ###   - And the section "SETUP SYSTEMD" in the upgrade script
 
+# Create a dedicated NGINX config using the conf/nginx.conf template
+ynh_config_add_nginx
+
 # Create a dedicated systemd config
 ynh_config_add_systemd
 
