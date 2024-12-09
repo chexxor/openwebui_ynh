@@ -56,6 +56,8 @@ _openwebui_venv_install() {
     ynh_exec_as "$app" "$venvpy" -m pip install openwebui
 }
 
+_openwebui_venv_install
+
 ### `ynh_setup_source` is used to install an app from a zip or tar.gz file,
 ### downloaded from an upstream source, like a git repository.
 ### `ynh_setup_source` use the file manifest.toml
