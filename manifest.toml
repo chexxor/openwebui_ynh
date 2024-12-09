@@ -91,12 +91,12 @@ ram.runtime = "50M"
 
     [resources.sources]
 
-    #[resources.sources.main]
+    [resources.sources.main]
     # This will pre-fetch the asset which can then be deployed during the install/upgrade scripts with :
     #    ynh_setup_source --dest_dir="$install_dir"
     # You can also define other assets than "main" and add --source_id="foobar" in the previous command
-    #url = "https://github.com/open-webui/open-webui/archive/refs/tags/v0.4.8.tar.gz"
-    #sha256 = "b435bc05920fb3066aa8067897fa4c0afe2636c92b775c372ca33ae444c13156"
+    url = "https://github.com/open-webui/open-webui/archive/refs/tags/v0.4.8.tar.gz"
+    sha256 = "b435bc05920fb3066aa8067897fa4c0afe2636c92b775c372ca33ae444c13156"
 
     # These infos are used by https://github.com/YunoHost/apps/blob/master/tools/autoupdate_app_sources/autoupdate_app_sources.py
     # to auto-update the previous asset urls and sha256sum + manifest version
