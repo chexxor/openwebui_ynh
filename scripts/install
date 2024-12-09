@@ -47,12 +47,14 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-python3 -m venv --upgrade "$install_dir/venv"
+python3 -m venv "$install_dir/venv"
 venvpy="$install_dir/venv/bin/python3"
+source venv/bin/activate
 
 "$venvpy" -m pip install --upgrade --no-cache-dir pip
+"$venvpy" -m pip install -r $install_dir/backend/requirements.txt
 
-"$venvpy" -m pip install open-webui
+# "$venvpy" -m pip install open-webui
 
 ### `ynh_setup_source` is used to install an app from a zip or tar.gz file,
 ### downloaded from an upstream source, like a git repository.
