@@ -1,5 +1,5 @@
 [Unit]
-Description=Small description of the service
+Description=Comprehensive suite for LLMs with a user-friendly WebUI
 After=network.target
 
 [Service]
