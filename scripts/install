@@ -52,7 +52,7 @@ ynh_setup_source --dest_dir="$install_dir"
 
 python3 -m venv "$install_dir/venv"
 (
-    # venvpy="$install_dir/venv/bin/python3"
+    venvpy="$install_dir/venv/bin/python3"
     . $install_dir/venv/bin/activate
 
     "$venvpy" -m pip install --upgrade --no-cache-dir pip
