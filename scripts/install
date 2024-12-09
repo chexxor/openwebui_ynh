@@ -47,6 +47,9 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Setting up source files..."
 
+# Download, check integrity, uncompress and patch the source from manifest.toml
+ynh_setup_source --dest_dir="$install_dir"
+
 python3 -m venv "$install_dir/venv"
 venvpy="$install_dir/venv/bin/python3"
 . $install_dir/venv/bin/activate
@@ -54,9 +57,6 @@ venvpy="$install_dir/venv/bin/python3"
 "$venvpy" -m pip install --upgrade --no-cache-dir pip
 
 # "$venvpy" -m pip install open-webui
-
-# Download, check integrity, uncompress and patch the source from manifest.toml
-ynh_setup_source --dest_dir="$install_dir"
 
 "$venvpy" -m pip install -r $install_dir/backend/requirements.txt
 
