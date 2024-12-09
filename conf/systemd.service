@@ -7,7 +7,8 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/venv/bin/python __INSTALL_DIR__/backend/open_webui/__init__.py serve
+ExecStart=open-webui serve
+# ExecStart=__INSTALL_DIR__/venv/bin/python __INSTALL_DIR__/backend/open_webui/__init__.py serve
 # Environment=PYTHONPATH=__INSTALL_DIR__/backend:$PYTHONPATH
 Environment=PATH=__INSTALL_DIR__/venv/bin:$PATH
 Environment=WEBUI_URL="http://localhost:8080"

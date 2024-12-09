@@ -52,11 +52,12 @@ ynh_setup_source --dest_dir="$install_dir"
 
 python3 -m venv "$install_dir/venv"
 (
-    venvpy="$install_dir/venv/bin/python3"
+    # venvpy="$install_dir/venv/bin/python3"
     . $install_dir/venv/bin/activate
 
-    "$venvpy" -m pip install --upgrade --no-cache-dir pip
-    "$venvpy" -m pip install -r $install_dir/backend/requirements.txt
+    # "$venvpy" -m pip install --upgrade --no-cache-dir pip
+    # "$venvpy" -m pip install -r $install_dir/backend/requirements.txt
+    pip install open-webui==0.4.7
 )
 
 ### $install_dir will automatically be initialized with some decent
