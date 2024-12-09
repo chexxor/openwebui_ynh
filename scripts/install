@@ -52,16 +52,13 @@ venvpy="$install_dir/venv/bin/python3"
 # source venv/bin/activate
 
 "$venvpy" -m pip install --upgrade --no-cache-dir pip
-"$venvpy" -m pip install -r $install_dir/backend/requirements.txt
 
 # "$venvpy" -m pip install open-webui
 
-### `ynh_setup_source` is used to install an app from a zip or tar.gz file,
-### downloaded from an upstream source, like a git repository.
-### `ynh_setup_source` use the file manifest.toml
-
 # Download, check integrity, uncompress and patch the source from manifest.toml
 ynh_setup_source --dest_dir="$install_dir"
+
+"$venvpy" -m pip install -r $install_dir/backend/requirements.txt
 
 ### $install_dir will automatically be initialized with some decent
 ### permission by default... however, you may need to recursively reapply
