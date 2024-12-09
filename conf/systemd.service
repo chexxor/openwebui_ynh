@@ -8,10 +8,11 @@ User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
 ExecStart=__INSTALL_DIR__/venv/bin/python __INSTALL_DIR__/backend/open_webui/__init__.py serve
-Environment=WEBUI_URL="http://localhost:8080";
-Environment=SCARF_NO_ANALYTICS="True";
-Environment=DO_NOT_TRACK="True";
-Environment=ANONYMIZED_TELEMETRY="False";
+Environment=PYTHONPATH=__INSTALL_DIR__/backend:$PYTHONPATH
+Environment=WEBUI_URL="http://localhost:8080"
+Environment=SCARF_NO_ANALYTICS="True"
+Environment=DO_NOT_TRACK="True"
+Environment=ANONYMIZED_TELEMETRY="False"
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 
