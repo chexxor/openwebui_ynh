@@ -52,7 +52,7 @@ venvpy="$install_dir/venv/bin/python3"
 
 "$venvpy" -m pip install --upgrade --no-cache-dir pip
 
-"$venvpy" -m pip install openwebui
+"$venvpy" -m pip install open-webui
 
 ### `ynh_setup_source` is used to install an app from a zip or tar.gz file,
 ### downloaded from an upstream source, like a git repository.
